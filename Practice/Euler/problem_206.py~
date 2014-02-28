@@ -1,0 +1,23 @@
+'''
+problem 206
+Find the unique possitive integer whose square is of the form  1_2_3_4_5_6_7_8_9_0
+where _ is a single digit
+'''
+import math
+def form_string():
+    
+    s = '1_2_3_4_5_6_7_8_9_0'
+    print len(s)
+    return {int(s.replace('_',str(i))) for i in range(1,10)}
+
+def solution(result):
+    i = 1000   
+    while True:
+        if i**2 in result:
+            return result
+        else:
+            i+=1
+
+
+result = form_string()
+print solution(result)

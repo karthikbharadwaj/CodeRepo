@@ -1,0 +1,11 @@
+'''
+LCS problem: Finding the longest common subsequence between two list X,Y
+
+'''
+
+
+def lcs(x,y):
+
+
+    return result
+print lcs('AGGTAB', 'GTXAYB', [])

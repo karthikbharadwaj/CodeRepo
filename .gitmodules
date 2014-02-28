@@ -1,0 +1,6 @@
+[submodule "Practice/bundle/fugitive"]
+	path = Practice/bundle/fugitive
+	url = http://github.com/tpope/vim-fugitive.git
+[submodule "Practice/bundle/snipmate"]
+	path = Practice/bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim.git

@@ -1,0 +1,30 @@
+
+'''
+largest n digit pandigital prime
+'''
+from general import rotate,get_primes,is_prime,permute
+
+
+
+
+#primes = set(get_primes(1000000000))
+
+
+def gen_pan_digit(n):
+
+    return ''.join([str(j) for j in range(n,0,-1)])
+
+def solution():
+    print "hello"
+    max_pan_digit = 0
+    
+    for i in range(9,4,-1):
+        for num in permute(str(gen_pan_digit(i))):
+            num = int(num)
+            if is_prime(num) and max_pan_digit < num:
+                max_pan_digit = num
+        print "done with:",i,"max so far:",max_pan_digit
+    return max_pan_digit
+    
+
+print solution()

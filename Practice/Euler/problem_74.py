@@ -1,0 +1,29 @@
+'''
+problem_74.py
+
+Finding numbers which has atleast six non repeating numbers in a cycle of sum of the factorial.
+'''
+
+from general import get_digits,factorial
+
+def fact_sum(n):
+    return sum([factorial(i) for i in get_digits(n)])
+
+memo_values = {}
+
+
+def solution():
+    
+    solution_set = set()
+    for i in range(1,1000000):
+        subset = set()
+        j = i
+        while j not in subset:
+            subset.add(j)
+            j = fact_sum(j)
+        if len(subset)==60:
+            solution_set.add(i)
+    return len(solution_set)
+
+
+print solution()

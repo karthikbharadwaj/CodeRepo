@@ -1,0 +1,25 @@
+__author__ = 'karthikb'
+
+from general import factors
+
+
+factors_dict = {}
+
+def get_triangle_num(n):
+    return n * (n+1)//2
+    
+
+
+def solution(n):
+
+    ''' find the first triangle number to have 500 factors
+    '''
+    i = 1
+    factor_len = 0
+    while factor_len < n:
+        t_num = get_triangle_num(i)        
+        factor_len = len(factors(t_num))
+        i+=1
+    return t_num
+
+print solution(100)

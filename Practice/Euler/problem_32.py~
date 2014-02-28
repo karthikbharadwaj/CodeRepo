@@ -1,0 +1,33 @@
+'''
+Problem 32.py
+
+Find the sum of all pandigitital products
+Pandigitital product:
+     Multiplier * multiplicant = product
+
+All the three put together should be pandigital-n 
+'''
+from general import get_digits
+
+def solution():
+
+    solution_set = set()
+    for i in range(1000):
+        for j in range(1000):
+            i_len = len(str(i))
+            j_len = len(str(j))
+            prod = i*j
+            prod_len = len(str(prod))
+            total_len = i_len + j_len + prod_len
+            print total_len
+            if set(get_digits(prod)+get_digits(i)+get_digits(j)) == set([1,2,3,4,5,6,7,8,9]):
+                solution_set.add(prod)
+            if total_len > 9:
+                return sum(solution_set)
+
+print solution()
+
+
+
+
+

@@ -1,0 +1,24 @@
+Kirk Royal
+----------
+
+* Kirk royal has been moved to End of march
+
+Issues:
+
+How to handle the volume dissapearing
+
+Cloud IQ:
+
+* Deployment of Appstack and the gateway in the cloud
+* Data Servers are inside the customers area
+* Data servers polls the gateway for instructions
+* Based on Gruvy, Grills, Jcloud, MySQL, JASYPT, JGrid,LiquidBase
+* The VMs are pushed to the Blobstore and then we move it to 
+* Cloud IQ has Jcloud v 1.4
+
+
+Private Infoset:
+* Problem with private infoset still persists
+* Union and Intersection
+* Creation testing
+

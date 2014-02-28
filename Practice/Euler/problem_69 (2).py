@@ -1,0 +1,27 @@
+from general import get_primes
+
+'''
+problem 69:
+Finding the Totient maximum
+'''
+
+def find_totient(n):
+    primes = get_primes(n)
+    totient = n
+    for prime in primes:
+        if n % prime ==0:
+            totient *=(1- 1/float(prime))
+
+    return totient
+
+def solution():
+    max_tot,max_tot_val = 0,- float("inf")
+    for i in range(1,1000000):
+        value = i/find_totient(i)
+        if  value > max_tot_val:
+            max_tot,max_tot_val = i,value
+    return max_tot
+
+
+print solution()
+
