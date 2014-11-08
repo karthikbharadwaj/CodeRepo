@@ -18,3 +18,7 @@ class Solution:
                     prev = curr
                     curr = curr.next
         return head
+
+    a = []
+    a.insert(1,0)
+    print a

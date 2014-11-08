@@ -12,11 +12,15 @@ class Tree:
         self.root = None
 
     def add_item(self,root,item):
-
         new_node = TreeNode(item)
-        if self.root is None:
-            self.root = new_node
-        elif self.root.val >= item:
-            self.add_item(root.left)
+        if root is None:
+            root = new_node
+        elif root.val >= item:
+            self.add_item(root.left,item)
+        else:
+            self.add_item(root.right,item)
+
+t = Tree()
+t.add_item(t.root,10)
 
 
