@@ -20,7 +20,16 @@ class Tree:
         else:
             self.add_item(root.right,item)
 
+    def print_tree(self):
+        if self.root:
+            print self.root.val
+        elif self.root.left:
+
+
+
+
 t = Tree()
 t.add_item(t.root,10)
+t.print_tree(t.root)
 
 
