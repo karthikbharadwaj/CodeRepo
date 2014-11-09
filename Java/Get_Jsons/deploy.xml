@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:ws="http://siq.ibm.com/ws" xmlns:www.hello.org="http://www.hello.org">
+  <process name="www.hello.org:HelloCountry">
+    <active>true</active>
+    <retired>false</retired>
+    <process-events generate="all"/>
+    <provide partnerLink="client">
+      <service name="www.hello.org:HelloCountryService" port="HelloCountryPort"/>
+    </provide>
+    <invoke partnerLink="CountryPL">
+      <service name="ws:ResService" port="GServicePort"/>
+    </invoke>
+  </process>
+</deploy>

@@ -29,7 +29,6 @@ def binary_rep(a):
     return r
 
 
-
 def power(a,b):
 
     if b == 1:
@@ -86,7 +85,6 @@ def merge(a,b):
 
 def merge_sort(a):
     total_len = len(a)
-
     if total_len == 1:
         return a
     first = a[:total_len//2]

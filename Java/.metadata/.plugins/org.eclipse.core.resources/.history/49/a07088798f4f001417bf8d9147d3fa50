@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:ws.invocation.tps="http://ws.invocation.tps">
-  <process name="ws.invocation.tps:Synchronous BPEL Process">
-    <active>true</active>
-    <retired>false</retired>
-  </process>
-</deploy>
