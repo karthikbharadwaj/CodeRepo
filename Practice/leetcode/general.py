@@ -33,7 +33,6 @@ def get_words(s):
     return words
 
 
-
 if __name__ == "__main__":
     #s = binary_search([3,4,5,6],3)
     print get_words('abc ab  c')

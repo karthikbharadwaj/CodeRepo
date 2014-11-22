@@ -14,27 +14,15 @@ def checkPalindrome(s):
     while i < j:
         if s[i] != s[j]:
             diff = (ord(s[j]) - ord(s[i]))
+            print diff,s[i],s[j]
             diff = diff if diff > 0 else -diff
-            if diff < 25:
-                moves += diff
-            else:
-                return 0
+            moves = moves + diff
+            if i == 4:
+                break
+            #moves = (moves + diff) % 26
         i += 1
         j -= 1
     return moves
 
-print checkPalindrome('hmhcy')
-'''
-5
-feazhaxpux
-hmhcy
-tmp
-11
-11
-58
-27
-4
-'''
-#abc
-#abcba
-#abcd
+print checkPalindrome('daixyfjncgjszcddttqdftxwxeczroduonuosdbwlmomorrknipsboqautalhfixuclnholtccfrtzdihsakhrmbkopttxqobddir')
+
